@@ -235,3 +235,52 @@ Case), Anhang Q1 sowie die Übersicht.
 
 **4. Die Fallback-Fassung bleibt unverändert.** `docs/index.html` und die
 bisherige URL sind nicht angefasst worden.
+
+
+---
+
+## 10. Nachtrag: Prüfung der veröffentlichten Fassung
+
+Die folgenden Werte stammen aus der **live abgerufenen** Seite unter
+`https://krehanintelligenceaugmented.github.io/clinical-intelligence-governance-higher-management/presentation-v1.2/`,
+nicht aus der lokalen Datei.
+
+| Auflösung | 19 Screens |
+|---|---|
+| 1920 × 1080 · 100 % | bestanden |
+| 1366 × 768 · 125 % Zoom (CSS 1093 × 614) | bestanden |
+| Fenster mit Adress- und Favoritenleiste, 1536 × 722 | bestanden |
+| iPhone Hochformat 375 × 812 | bestanden |
+
+- Kreuzblende live gemessen: **604 ms**; 100 ms nach Auslösung abgehende
+  Folie bei Opazität 0,20, ankommende bei 0,00 — keine lesbare Überlagerung
+- Sechs schnelle Klicks → Screen 06, fünf Tastendrücke → Screen 05
+- Tastatur: rechts, links, PageDown, PageUp, Leertaste, Home, End korrekt
+- Randzustände: auf der ersten Folie „zurück" deaktiviert, auf der letzten
+  „vor" deaktiviert
+- Übersicht: `position: fixed`, `z-index: 200`, volldeckend, Deck
+  `aria-hidden="true"`; Sprung auf Screen 11 setzt aktiv `s11` und Hash `#s11`
+- Konsolenfehler: 0 · Schriften geladen, aktive Familie „Noto Sans"
+- `robots`: `noindex, nofollow, noarchive`
+
+### Drei Befunde, die erst im Verlauf sichtbar wurden
+
+**1. Reflow-Media-Queries.** Bei 125 % Zoom griff `@media (max-width: 1100px)`
+und stellte die Anhangsfolien auf eine Spalte um; Screen 08 und alle vier
+Anhangsfolien wurden angeschnitten. Behoben durch Entfernen der
+`max-width`-Media-Queries aus der Bühnenschicht.
+
+**2. Schriftmetrik.** Nach dem Laden der echten Noto-Sans-WOFF2 liefen die
+Anhangsfolien Q1 und Q3 um 24 beziehungsweise 39 Pixel über die Bühne — lokal
+war das nicht aufgefallen, weil dort noch die Ersatzschrift maß. Behoben durch
+eine Feineinpassung je Folie: Die tatsächliche Ausdehnung aller Nachfahren
+wird gemessen und der Inhalt bei Bedarf proportional verkleinert, mit acht
+Pixeln Sicherheitsabstand. Live wirksam: Q1 bei Faktor 0,9408, Q3 bei 0,9109,
+alle übrigen Folien ohne Verkleinerung.
+
+**3. Eingabepufferung.** Sechs schnelle Klicks führten zunächst nur zwei
+Folien weiter. Die Navigation rechnet jetzt ab dem zuletzt angeforderten Ziel,
+sodass sich Eingaben aufsummieren.
+
+Der Inhaltsfingerabdruck blieb über alle drei Korrekturen unverändert
+(`9815fffe…85685`).

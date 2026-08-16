@@ -1,64 +1,207 @@
 {
-  "pruefumgebung": {
-    "engine": "Chromium (In-App-Browser dieser Umgebung)",
-    "hinweis": "Microsoft Edge ist auf diesem Rechner nicht installiert; Playwright mit channel msedge steht nicht zur Verfuegung. Edge nutzt dieselbe Blink-Engine, die Pruefung ist daher aussagekraeftig, ersetzt aber keinen Test im echten Edge.",
-    "devicePixelRatio": 2
+ "pruefumgebung": {
+  "engine": "Chromium (In-App-Browser dieser Umgebung)",
+  "hinweis": "Microsoft Edge ist auf diesem Rechner nicht installiert; Playwright mit channel msedge steht nicht zur Verfuegung. Edge nutzt dieselbe Blink-Engine, die Pruefung ist daher aussagekraeftig, ersetzt aber keinen Test im echten Edge.",
+  "devicePixelRatio": 2
+ },
+ "aufloesungen": [
+  {
+   "test": "1920x1080 · 100 %",
+   "viewport": "1920x1080",
+   "skala": 0.933,
+   "screens_geprueft": 19,
+   "bestanden": true
   },
+  {
+   "test": "1536x864 · 100 %",
+   "viewport": "1536x864",
+   "skala": 0.733,
+   "screens_geprueft": 19,
+   "bestanden": true
+  },
+  {
+   "test": "1536x864 · 125 % Zoom",
+   "viewport": "1229x691",
+   "skala": 0.573,
+   "screens_geprueft": 19,
+   "bestanden": true
+  },
+  {
+   "test": "1366x768 · 100 %",
+   "viewport": "1366x768",
+   "skala": 0.644,
+   "screens_geprueft": 19,
+   "bestanden": true
+  },
+  {
+   "test": "1366x768 · 125 % Zoom",
+   "viewport": "1093x614",
+   "skala": 0.502,
+   "screens_geprueft": 19,
+   "bestanden": true
+  },
+  {
+   "test": "1280x720 · 100 %",
+   "viewport": "1280x720",
+   "skala": 0.6,
+   "screens_geprueft": 19,
+   "bestanden": true
+  },
+  {
+   "test": "Fenster mit Adress- und Favoritenleiste",
+   "viewport": "1536x722",
+   "skala": 0.602,
+   "screens_geprueft": 19,
+   "bestanden": true
+  },
+  {
+   "test": "iPhone Hochformat",
+   "viewport": "375x812",
+   "skala": 0.195,
+   "screens_geprueft": 19,
+   "bestanden": true
+  },
+  {
+   "test": "iPhone Querformat",
+   "viewport": "812x375",
+   "skala": 0.281,
+   "screens_geprueft": 19,
+   "bestanden": true
+  }
+ ],
+ "geprueft_je_aufloesung": [
+  "genau ein sichtbarer .screen",
+  "Buehne vollstaendig im Viewport",
+  "Buehne endet oberhalb der Steuerleiste",
+  "keine Ueberschneidung Steuerleiste / .inner",
+  "kein Inhaltsobjekt ausserhalb der Buehnenflaeche",
+  "kein Dokument-Scrollen"
+ ],
+ "kreuzblende": {
+  "ausblenden_ms": 200,
+  "einblenden_ms": 270,
+  "gesamt_gemessen_ms": 528,
+  "lesbare_ueberlagerung": false,
+  "messung": "100 ms nach Auslösung: abgehende Folie Opazität 0.42, ankommende 0.00"
+ },
+ "eingabepufferung": {
+  "sechs_klicks_ab_s00": "s06",
+  "fuenf_tastendruecke_ab_s00": "s05",
+  "sichtbare_screens_danach": 1
+ },
+ "tastatur": {
+  "ArrowRight": "s04",
+  "ArrowLeft": "s03",
+  "PageDown": "s04",
+  "PageUp": "s03",
+  "Space": "s04",
+  "Home": "s00",
+  "End": "sQ4"
+ },
+ "randzustaende": {
+  "auf_erster_folie_zurueck_deaktiviert": true,
+  "auf_letzter_folie_vor_deaktiviert": true
+ },
+ "uebersicht": {
+  "geschlossen_display": "none",
+  "geoeffnet_position": "fixed",
+  "geoeffnet_zIndex": 200,
+  "deckt_viewport_vollstaendig": true,
+  "deck_aria_hidden_wenn_offen": true,
+  "escape_schliesst": true,
+  "sprung_auf_s11": "aktiv s11, Uebersicht geschlossen, Hash #s11"
+ },
+ "textkollisionen": {
+  "kopf_fuss_statement_paare": 0
+ },
+ "screen_11": {
+  "evaluation_delir_ueberlappung": "keine"
+ },
+ "ressourcen": {
+  "konsolenfehler": 0,
+  "http_404": 0,
+  "externe_ressourcen": 0,
+  "schriften": "3 WOFF2 relativ eingebunden, document.fonts.ready erfuellt, aktive Familie Noto Sans",
+  "lokale_pfade_im_dokument": false
+ },
+ "live_pruefung": {
+  "url": "https://krehanintelligenceaugmented.github.io/clinical-intelligence-governance-higher-management/presentation-v1.2/",
   "aufloesungen": [
-    {"test": "1920x1080 · 100 %",                              "viewport": "1920x1080", "skala": 0.933, "screens_geprueft": 19, "bestanden": true},
-    {"test": "1536x864 · 100 %",                               "viewport": "1536x864",  "skala": 0.733, "screens_geprueft": 19, "bestanden": true},
-    {"test": "1536x864 · 125 % Zoom",                          "viewport": "1229x691",  "skala": 0.573, "screens_geprueft": 19, "bestanden": true},
-    {"test": "1366x768 · 100 %",                               "viewport": "1366x768",  "skala": 0.644, "screens_geprueft": 19, "bestanden": true},
-    {"test": "1366x768 · 125 % Zoom",                          "viewport": "1093x614",  "skala": 0.502, "screens_geprueft": 19, "bestanden": true},
-    {"test": "1280x720 · 100 %",                               "viewport": "1280x720",  "skala": 0.600, "screens_geprueft": 19, "bestanden": true},
-    {"test": "Fenster mit Adress- und Favoritenleiste",        "viewport": "1536x722",  "skala": 0.602, "screens_geprueft": 19, "bestanden": true},
-    {"test": "iPhone Hochformat",                              "viewport": "375x812",   "skala": 0.195, "screens_geprueft": 19, "bestanden": true},
-    {"test": "iPhone Querformat",                              "viewport": "812x375",   "skala": 0.281, "screens_geprueft": 19, "bestanden": true}
+   {
+    "test": "1920x1080 · 100 %",
+    "viewport": "1920x1080",
+    "screens": 19,
+    "bestanden": true
+   },
+   {
+    "test": "1366x768 · 125 % Zoom",
+    "viewport": "1093x614",
+    "screens": 19,
+    "bestanden": true
+   },
+   {
+    "test": "Fenster mit Adress-/Favoritenleiste",
+    "viewport": "1536x722",
+    "screens": 19,
+    "bestanden": true
+   },
+   {
+    "test": "iPhone Hochformat",
+    "viewport": "375x812",
+    "screens": 19,
+    "bestanden": true
+   }
   ],
-  "geprueft_je_aufloesung": [
-    "genau ein sichtbarer .screen",
-    "Buehne vollstaendig im Viewport",
-    "Buehne endet oberhalb der Steuerleiste",
-    "keine Ueberschneidung Steuerleiste / .inner",
-    "kein Inhaltsobjekt ausserhalb der Buehnenflaeche",
-    "kein Dokument-Scrollen"
-  ],
-  "kreuzblende": {
-    "ausblenden_ms": 200,
-    "einblenden_ms": 270,
-    "gesamt_gemessen_ms": 528,
-    "lesbare_ueberlagerung": false,
-    "messung": "100 ms nach Auslösung: abgehende Folie Opazität 0.42, ankommende 0.00"
+  "kreuzblende_ms": 604,
+  "opazitaet_100ms_nach_ausloesung": {
+   "abgehend": 0.2,
+   "ankommend": 0.0
   },
-  "eingabepufferung": {
-    "sechs_klicks_ab_s00": "s06",
-    "fuenf_tastendruecke_ab_s00": "s05",
-    "sichtbare_screens_danach": 1
+  "eingaben": {
+   "sechs_klicks": "s06",
+   "fuenf_tasten": "s05"
   },
   "tastatur": {
-    "ArrowRight": "s04", "ArrowLeft": "s03", "PageDown": "s04",
-    "PageUp": "s03", "Space": "s04", "Home": "s00", "End": "sQ4"
+   "rechts": "s06",
+   "links": "s05",
+   "pageDown": "s06",
+   "pageUp": "s05",
+   "leertaste": "s06",
+   "home": "s00",
+   "end": "sQ4"
   },
   "randzustaende": {
-    "auf_erster_folie_zurueck_deaktiviert": true,
-    "auf_letzter_folie_vor_deaktiviert": true
+   "start_zurueck_deaktiviert": true,
+   "ende_vor_deaktiviert": true
   },
   "uebersicht": {
-    "geschlossen_display": "none",
-    "geoeffnet_position": "fixed",
-    "geoeffnet_zIndex": 200,
-    "deckt_viewport_vollstaendig": true,
-    "deck_aria_hidden_wenn_offen": true,
-    "escape_schliesst": true,
-    "sprung_auf_s11": "aktiv s11, Uebersicht geschlossen, Hash #s11"
+   "position": "fixed",
+   "zIndex": 200,
+   "volldeckend": true,
+   "deck_aria_hidden": true,
+   "sprung_s11": "aktiv s11, Hash #s11, Overlay zu"
   },
-  "textkollisionen": {"kopf_fuss_statement_paare": 0},
-  "screen_11": {"evaluation_delir_ueberlappung": "keine"},
-  "ressourcen": {
-    "konsolenfehler": 0,
-    "http_404": 0,
-    "externe_ressourcen": 0,
-    "schriften": "3 WOFF2 relativ eingebunden, document.fonts.ready erfuellt, aktive Familie Noto Sans",
-    "lokale_pfade_im_dokument": false
+  "konsolenfehler": 0,
+  "schrift": "Noto Sans",
+  "robots": "noindex, nofollow, noarchive",
+  "feineinpassung": {
+   "sQ1": "scale(0.9408)",
+   "sQ3": "scale(0.9109)",
+   "uebrige": "keine Skalierung noetig"
   }
+ },
+ "nachtraegliche_befunde": [
+  {
+   "befund": "Reflow-Media-Queries griffen bei 125 % Zoom und schnitten Screen 08 sowie alle Anhangsfolien an.",
+   "behebung": "max-width-Media-Queries aus der Buehnenschicht entfernt."
+  },
+  {
+   "befund": "Mit den echten Noto-Sans-Metriken liefen die Anhangsfolien Q1 und Q3 um 24 bzw. 39 px ueber die Buehne.",
+   "behebung": "Feineinpassung je Folie: gemessene Ausdehnung aller Nachfahren, proportionale Verkleinerung mit acht Pixeln Sicherheitsabstand."
+  },
+  {
+   "befund": "Sechs schnelle Klicks fuehrten nur zwei Folien weiter.",
+   "behebung": "Navigation rechnet ab dem zuletzt angeforderten Ziel; Eingaben summieren sich."
+  }
+ ]
 }
