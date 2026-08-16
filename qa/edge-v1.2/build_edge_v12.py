@@ -420,6 +420,30 @@ SHELL_JS = r"""
 
 
 # ==========================================================================
+def fix_s11_card_height(doc):
+    """Isolierte Layoutkorrektur auf Screen 11.
+
+    Der letzte Aufzaehlungspunkt der mittleren Karte („paralleler Vergleich
+    statt Umstellung") lief unter die Kartenunterkante. Ursache ist die
+    Kartenhoehe von 210 Einheiten: Die fuenf Punkte belegen mit ihren
+    Umbruechen rund 295 Einheiten ab Kartenoberkante bei y = 62.
+
+    Korrigiert wird ausschliesslich die Hoehe der drei Karten — Hintergrund
+    und farbige Kante — von 210 auf 270. Oberkanten, x-Positionen, Breiten,
+    Abstaende, Texte, Textpositionen, Farben und Eckenradien bleiben
+    unberuehrt. Zwischen Kartenunterkante (332) und Trennlinie (378) bleiben
+    46 Einheiten.
+    """
+    m = re.search(r'<section[^>]*id="s11".*?</section>', doc, re.S)
+    assert m, "Screen s11 nicht gefunden"
+    block = m.group(0)
+    pat = re.compile(r'(<rect[^>]*\by="62"[^>]*\b)height="210"')
+    fixed, n = pat.subn(r'\1height="270"', block)
+    assert n == 6, "Erwartet werden 6 Kartenrechtecke, gefunden: %d" % n
+    return doc[:m.start()] + fixed + doc[m.end():]
+
+
+# ==========================================================================
 def build():
     doc = io.open(SRC, encoding="utf-8").read()
 
@@ -495,6 +519,8 @@ def build():
         '<script>\n' + SHELL_JS + '\n</script>\n'
         '</body></html>\n'
     )
+
+    html = fix_s11_card_height(html)
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     io.open(OUT, "w", encoding="utf-8").write(html)

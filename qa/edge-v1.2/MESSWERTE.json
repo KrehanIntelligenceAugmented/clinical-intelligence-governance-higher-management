@@ -203,5 +203,51 @@
    "befund": "Sechs schnelle Klicks fuehrten nur zwei Folien weiter.",
    "behebung": "Navigation rechnet ab dem zuletzt angeforderten Ziel; Eingaben summieren sich."
   }
- ]
+ ],
+ "patch_v1_2_1": {
+  "befund": "Screen 11: Der letzte Aufzaehlungspunkt der mittleren Karte lief unter die Kartenunterkante.",
+  "ursache": "Kartenhoehe 210 Einheiten ab y=62; die fuenf Punkte belegen mit Umbruechen rund 295 Einheiten.",
+  "korrektur": "Hoehe aller drei Karten (Hintergrund und Farbkante, sechs Rechtecke) von 210 auf 270.",
+  "unveraendert": [
+   "x-Positionen",
+   "y-Positionen",
+   "Breiten",
+   "Abstaende",
+   "Texte",
+   "Textpositionen",
+   "Schriftgroessen",
+   "Farben",
+   "Eckenradien",
+   "Trennlinie y=378",
+   "Statement"
+  ],
+  "geometrie_nachher": {
+   "oberkanten": [
+    62,
+    62,
+    62
+   ],
+   "unterkanten": [
+    332,
+    332,
+    332
+   ],
+   "hoehe": 270,
+   "alle_gleich_hoch": true,
+   "letzter_bullet": "Umstellung",
+   "bullet_unterkante": 298,
+   "innenabstand_unten": 34,
+   "bullet_vollstaendig_in_box": true,
+   "abstand_box_zu_trennlinie": 46,
+   "text_kreuzt_boxkante": "keine"
+  },
+  "regression": {
+   "geometrie_alle_19_screens": "bestanden",
+   "crossfade": "s10 -> s11",
+   "tastatur": "zurueck auf s10",
+   "uebersicht": "oeffnet und schliesst",
+   "vollbild": "verfuegbar",
+   "inhaltsfingerabdruck": "9815fffe6bbd9acc959efc2ce20dfac0dffba74217c8823960d432d57dd85685 unveraendert"
+  }
+ }
 }
