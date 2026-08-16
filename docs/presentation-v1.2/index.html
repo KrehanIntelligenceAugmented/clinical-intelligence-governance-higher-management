@@ -1472,7 +1472,10 @@ body { font-family: var(--font-sans); color: var(--text); }
     }
     if (!isFinite(top) || !isFinite(bot) || k <= 0) { return; }
     var need = (bot - top) / k;
-    var s = (need > room) ? Math.max(0.70, room / need) : 1;
+    /* Acht Pixel Sicherheitsabstand, damit Rundungen bei der Skalierung
+       nichts an den Buehnenrand druecken. */
+    var target = room - 8;
+    var s = (need > target) ? Math.max(0.70, target / need) : 1;
     inner.style.transformOrigin = '50% 50%';
     inner.style.transform = (s < 0.999) ? 'scale(' + s.toFixed(4) + ')' : '';
   }
