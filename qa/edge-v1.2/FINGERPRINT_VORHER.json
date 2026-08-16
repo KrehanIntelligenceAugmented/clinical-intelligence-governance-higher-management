@@ -1,0 +1,162 @@
+{
+ "datei": "Clinical_Intelligence_Governance_FINAL_2026-08-16.html",
+ "screens": [
+  {
+   "id": "s00",
+   "sha256": "150962578abb0cfe8119121bb8bd9c9ab9d0d1758d05b0bce896784882b82613",
+   "zeichen": 510,
+   "svg": 1,
+   "auszug": "KLINISCH GEFÜHRTE KI-TRANSFORMATION Vom Anwendungsportfolio zu Clinica"
+  },
+  {
+   "id": "s01",
+   "sha256": "5fbac7bfe20015fd9469288e986cb50a1a22ab344991829b21be345d61ec0538",
+   "zeichen": 880,
+   "svg": 1,
+   "auszug": "01 · AUSGANGSLAGE KI kommt bereits. Die Frage ist, wie. Über Einzelanw"
+  },
+  {
+   "id": "s02",
+   "sha256": "68c38e2288bacf6269a4d06579a3117117b0e3f279c51714d7dbcdfdc8af41e8",
+   "zeichen": 598,
+   "svg": 1,
+   "auszug": "02 · ORDNUNG Werkzeuge nach klinischem Zweck ordnen. Viele Anwendungen"
+  },
+  {
+   "id": "s03",
+   "sha256": "76f076cbb086948a00c12052b63cf4d5c25ab4aacdf50c94c99a5b035f161e6b",
+   "zeichen": 948,
+   "svg": 1,
+   "auszug": "03 · LAYER 1 · MEDIZINISCHER KERNPROZESS Drei Säulen klinischer Intell"
+  },
+  {
+   "id": "s04",
+   "sha256": "4a0e109dbf0537d021a092b89f1e5bd2a67679a7a79915f7d9415aa019f94bf7",
+   "zeichen": 801,
+   "svg": 1,
+   "auszug": "04 · KOGNITIVE LAST Zu viel unverdichtete Information zum falschen Zei"
+  },
+  {
+   "id": "s05",
+   "sha256": "4f642811da3a43a4daac181abb3eb54218c9506954ac96607feaea5ba936b4c9",
+   "zeichen": 804,
+   "svg": 1,
+   "auszug": "05 · AMPLIFIED INTELLIGENCE Entlasten, was entlastet werden darf. KI k"
+  },
+  {
+   "id": "s06",
+   "sha256": "4ab427c431745bddea8f28e0e3b8070b1fa6327c319d4decaea0e11f0fdb30c5",
+   "zeichen": 959,
+   "svg": 1,
+   "auszug": "06 · EVIDENZLANDKARTE Die Evidenz trägt — auf unterschiedlichen Wirkun"
+  },
+  {
+   "id": "s07",
+   "sha256": "2b1cb46df3a62e267dfbb1a4d71dfc9e97945a260f1cd4b5fb4e6b44b8a44df7",
+   "zeichen": 774,
+   "svg": 1,
+   "auszug": "07 · TRANSLATIONSLÜCKE Systemleistung ist noch keine klinische Wirkung"
+  },
+  {
+   "id": "s08",
+   "sha256": "a5318b4de1ce002bb6a242bcb5500517ef7f3813a51b6d965f26033aee11f708",
+   "zeichen": 891,
+   "svg": 1,
+   "auszug": "08 · SÄULE 3 IN DER PRAXIS So arbeitet ein Health Professional mit ein"
+  },
+  {
+   "id": "s09",
+   "sha256": "f5a4074e9beac7b66fae09d8a422a883cdb3714365fa99f413acb1a09e793ffb",
+   "zeichen": 896,
+   "svg": 1,
+   "auszug": "09 · NEUES SKILLSET AI Communication ist mehr als Prompting. Der Umgan"
+  },
+  {
+   "id": "s10",
+   "sha256": "742369b30c92aad927af99c0554b7975a2ef73718a5edeaf8a39da8a04fd9a1b",
+   "zeichen": 809,
+   "svg": 1,
+   "auszug": "10 · ERSTER IMPLEMENTIERUNGSFALL ClinicalKey AI als kontrollierter ers"
+  },
+  {
+   "id": "s11",
+   "sha256": "59f9a767bbd7b29cf08aca250cfab25722f318013c0c395b405dc5bf999702a4",
+   "zeichen": 801,
+   "svg": 1,
+   "auszug": "11 · ENTRY USE CASE Mangelernährung als abgegrenzter Startpunkt. Eine "
+  },
+  {
+   "id": "s12",
+   "sha256": "b044e4290ef097c01ab7d6ba8b6decde6dba0f256c87f0fe65192d83b79917f8",
+   "zeichen": 825,
+   "svg": 1,
+   "auszug": "12 · ANSCHLUSSARCHITEKTUR Layer 2 und Layer 3 schließen an — sie führe"
+  },
+  {
+   "id": "s13",
+   "sha256": "775abbf7f89c92dbc4d16ef21004a64b152c8196876ffe768d4a6164cfadb427",
+   "zeichen": 685,
+   "svg": 1,
+   "auszug": "13 · MANAGEMENT-GATE Vor Skalierung muss die Organisation selbst urtei"
+  },
+  {
+   "id": "s14",
+   "sha256": "691badedd9111638d18b1a7b56c9160c9784d00be43f29572247db2237eb4962",
+   "zeichen": 634,
+   "svg": 1,
+   "auszug": "14 · AUFTRAG Nicht Anwendungen sammeln. Gestaltungsfähigkeit aufbauen."
+  },
+  {
+   "id": "sQ1",
+   "sha256": "1f0e3477186dc90e3f058bd6111d1d7ef2c1f06251c167412f5e562633e06403",
+   "zeichen": 2944,
+   "svg": 0,
+   "auszug": "QUELLENVERZEICHNIS · TEIL 1 Klinische Wirksamkeit und ihre Grenzen Die"
+  },
+  {
+   "id": "sQ2",
+   "sha256": "74ea3edefee10868e95c3814cd40f9ceeb2bb8c93d6fbec0009aae2ca999c5fc",
+   "zeichen": 2873,
+   "svg": 0,
+   "auszug": "QUELLENVERZEICHNIS · TEIL 2 Systemvergleich, Automation Bias und Kompe"
+  },
+  {
+   "id": "sQ3",
+   "sha256": "d8429a196c9a359ba0970e45107723bd65cebeec1c68f3675ef41e8c9aa61e31",
+   "zeichen": 2579,
+   "svg": 0,
+   "auszug": "QUELLENVERZEICHNIS · TEIL 3 Rechts-, Planungs- und Governance-Rahmen D"
+  },
+  {
+   "id": "sQ4",
+   "sha256": "1e9e2cb804c0ec8b37baff0f7f78bd4c9c7ac384e0fb979666ccbab941a7d3f6",
+   "zeichen": 1700,
+   "svg": 0,
+   "auszug": "LESEHILFE Begriffe, die im Vortrag vorkommen Alle verwendeten Kurzform"
+  }
+ ],
+ "anzahl_screens": 19,
+ "svg_gesamt": 15,
+ "reihenfolge": [
+  "s00",
+  "s01",
+  "s02",
+  "s03",
+  "s04",
+  "s05",
+  "s06",
+  "s07",
+  "s08",
+  "s09",
+  "s10",
+  "s11",
+  "s12",
+  "s13",
+  "s14",
+  "sQ1",
+  "sQ2",
+  "sQ3",
+  "sQ4"
+ ],
+ "gesamt_sha256": "9815fffe6bbd9acc959efc2ce20dfac0dffba74217c8823960d432d57dd85685"
+}
