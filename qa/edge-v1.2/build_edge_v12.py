@@ -235,12 +235,28 @@ SHELL_JS = r"""
     var inner = st.querySelector('.inner');
     if (!inner) { return; }
     inner.style.transform = '';
-    var padY = 2 * parseFloat(getComputedStyle(st).paddingTop || 0);
-    var room = DESIGN_H - padY;
-    var need = inner.scrollHeight;
-    var s = (need > room && need > 0) ? Math.max(0.72, room / need) : 1;
+    var cs = getComputedStyle(st);
+    var k = parseFloat(cs.getPropertyValue('--k')) || 1;
+    var padT = parseFloat(cs.paddingTop) || 0;
+    var room = DESIGN_H - 2 * padT;
+
+    /* Die tatsaechliche Ausdehnung ueber alle Nachfahren messen: Kinder
+       koennen ueber die .inner-Box hinauslaufen, ohne deren Hoehe zu
+       veraendern. Gemessen wird im Bildschirmraum und durch den
+       Buehnenfaktor auf Layoutpixel zurueckgerechnet. */
+    var nodes = inner.querySelectorAll('*');
+    var top = Infinity, bot = -Infinity;
+    for (var i = 0; i < nodes.length; i++) {
+      var b = nodes[i].getBoundingClientRect();
+      if (!b.width && !b.height) { continue; }
+      if (b.top < top) { top = b.top; }
+      if (b.bottom > bot) { bot = b.bottom; }
+    }
+    if (!isFinite(top) || !isFinite(bot) || k <= 0) { return; }
+    var need = (bot - top) / k;
+    var s = (need > room) ? Math.max(0.70, room / need) : 1;
     inner.style.transformOrigin = '50% 50%';
-    inner.style.transform = (s < 1) ? 'scale(' + s.toFixed(4) + ')' : '';
+    inner.style.transform = (s < 0.999) ? 'scale(' + s.toFixed(4) + ')' : '';
   }
 
   /* ---- Folienwechsel mit Kreuzblende ------------------------------ */
