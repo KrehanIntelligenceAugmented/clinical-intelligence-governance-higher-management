@@ -1436,8 +1436,29 @@ body { font-family: var(--font-sans); color: var(--text); }
     k = Math.max(0.12, Math.min(k, 1.6));
     for (var i = 0; i < all.length; i++) {
       var st = all[i].querySelector('.stage');
-      if (st) { st.style.setProperty('--k', k); }
+      if (!st) { continue; }
+      st.style.setProperty('--k', k);
+      innerFit(st);
     }
+  }
+
+  /* Feineinpassung je Folie.
+
+     Die Buehne ist 1920 x 1080 gross. Ob der Folieninhalt darin Platz hat,
+     haengt von der tatsaechlich geladenen Schrift ab: Ersatzschriften bauen
+     anders als Noto Sans. Statt auf eine Metrik zu vertrauen, wird die
+     benoetigte Hoehe gemessen und der Inhalt bei Bedarf proportional
+     verkleinert. Dadurch kann nichts abgeschnitten werden. */
+  function innerFit(st) {
+    var inner = st.querySelector('.inner');
+    if (!inner) { return; }
+    inner.style.transform = '';
+    var padY = 2 * parseFloat(getComputedStyle(st).paddingTop || 0);
+    var room = DESIGN_H - padY;
+    var need = inner.scrollHeight;
+    var s = (need > room && need > 0) ? Math.max(0.72, room / need) : 1;
+    inner.style.transformOrigin = '50% 50%';
+    inner.style.transform = (s < 1) ? 'scale(' + s.toFixed(4) + ')' : '';
   }
 
   /* ---- Folienwechsel mit Kreuzblende ------------------------------ */
@@ -1581,7 +1602,11 @@ body { font-family: var(--font-sans); color: var(--text); }
   updateChrome();
 
   if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(function () { fit(); window.__fontsReady = true; });
+    document.fonts.ready.then(function () {
+      fit();
+      window.setTimeout(fit, 60);
+      window.__fontsReady = true;
+    });
   } else {
     window.__fontsReady = true;
   }
