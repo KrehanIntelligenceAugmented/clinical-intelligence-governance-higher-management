@@ -395,6 +395,13 @@ body { font-family: var(--font-sans); color: var(--text); }
 .bar__dots button.is-on { background: var(--record); height: 8px; }
 .bar__dots button:focus-visible { outline: 2px solid var(--record); outline-offset: 2px; }
 
+/* Die Quellenzeile bekommt eine eigene volle Zeile unter den Chips.
+   Mit Quellenschluesseln wird sie laenger; nebeneinander wuerde sie in
+   drei schmale Zeilen brechen. */
+.foot { row-gap: 6px; }
+.foot__src { flex: 1 1 100%; order: 9; }
+.foot__no { order: 8; margin-left: auto; }
+
 /* --- Uebersicht: echtes modales Overlay ---------------------------- */
 [hidden] { display: none !important; }
 .map {
@@ -498,7 +505,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="524" y="251.24" fill="#9AA7B2" font-size="15.5" font-weight="400" letter-spacing="0" text-anchor="start">werden.</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 02</span><span class="chip">SÄULE 1–3</span><span class="chip">S-02, S-12, S-21</span><span class="foot__src">Säule 1 · Dossier v1.1 · Säule 2 · Dossier v1.1 · Säule 3 · Dossier v1.1 · Datenschutzbehörde</span><span class="foot__no">01 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 02 · S. 5</span><span class="chip">SÄULE 1–3</span><span class="chip">AUSSAGEN S-02, S-12, S-21</span><span class="foot__src">QUELLEN &nbsp;Q-32 · Säule 1 · Dossier v1.1 · Q-33 · Säule 2 · Dossier v1.1 · Q-34 · Säule 3 · Dossier v1.1 · Q-29 · Datenschutzbehörde</span><span class="foot__no">01 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s02" data-n="02" data-rail="1"><div class="stage">
@@ -571,7 +578,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="492" y="344" fill="#EDF1F4" font-size="20" font-weight="600" letter-spacing="0" text-anchor="start">Clinical Knowledge &amp; Reasoning</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 02</span><span class="chip">SÄULE 1–3</span><span class="chip">S-17, S-21</span><span class="foot__src">Säule 1 · Dossier v1.1 · Säule 2 · Dossier v1.1 · Säule 3 · Dossier v1.1</span><span class="foot__no">02 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 02 · S. 5</span><span class="chip">SÄULE 1–3</span><span class="chip">AUSSAGEN S-17, S-21</span><span class="foot__src">QUELLEN &nbsp;Q-32 · Säule 1 · Dossier v1.1 · Q-33 · Säule 2 · Dossier v1.1 · Q-34 · Säule 3 · Dossier v1.1</span><span class="foot__no">02 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s03" data-n="03" data-rail="1"><div class="stage">
@@ -635,7 +642,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <line x1="660" y1="195.44" x2="638" y2="195.44" stroke="#6C7883" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ci-arrow)"/>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 05</span><span class="chip">SÄULE 1–3</span><span class="chip">S-01, S-17, S-22</span><span class="foot__src">Donabedian · Klinische Mikrosysteme · Starmer et al. 2014 · Rotter et al. 2025 · Säule 1 · Dossier v1.1 · Säule 2 · Dossier v1.1 · Säule 3 · Dossier v1.1</span><span class="foot__no">03 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 05 · S. 11</span><span class="chip">SÄULE 1–3</span><span class="chip">AUSSAGEN S-01, S-17, S-22</span><span class="foot__src">QUELLEN &nbsp;Q-30 · Donabedian · Q-31 · Klinische Mikrosysteme · Q-04 · Starmer et al. 2014 · Q-11 · Rotter et al. 2025 · Q-32 · Säule 1 · Dossier v1.1 · Q-33 · Säule 2 · Dossier v1.1 · Q-34 · Säule 3 · Dossier v1.1</span><span class="foot__no">03 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s04" data-n="04" data-rail="1"><div class="stage">
@@ -683,7 +690,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="512" y="223.24" fill="#9AA7B2" font-size="15.5" font-weight="400" letter-spacing="0" text-anchor="start">Verlust der klinischen Gesamtsicht</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 07</span><span class="chip">SÄULE 1</span><span class="chip">S-02, S-04, S-10</span><span class="foot__src">Säule 1 · Dossier v1.1 · Peterson et al. 1992 · Starmer et al. 2014 · Goodman et al. 2024 · Dratsch et al. 2023</span><span class="foot__no">04 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 07 · S. 15</span><span class="chip">SÄULE 1</span><span class="chip">AUSSAGEN S-02, S-04, S-10</span><span class="foot__src">QUELLEN &nbsp;Q-32 · Säule 1 · Dossier v1.1 · Q-03 · Peterson et al. 1992 · Q-04 · Starmer et al. 2014 · Q-10 · Goodman et al. 2024 · Q-07 · Dratsch et al. 2023</span><span class="foot__no">04 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s05" data-n="05" data-rail="1"><div class="stage">
@@ -734,7 +741,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <line x1="490" y1="52" x2="490" y2="296" stroke="#2A333C" stroke-width="1.2" stroke-linecap="round"/>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 07</span><span class="chip">SÄULE 1–3</span><span class="chip">S-10, S-11, S-16</span><span class="foot__src">Dratsch et al. 2023 · Budzyń et al. 2025 · Ke et al. 2026 · Säule 1 · Dossier v1.1 · Säule 3 · Dossier v1.1</span><span class="foot__no">05 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 07 · S. 15</span><span class="chip">SÄULE 1–3</span><span class="chip">AUSSAGEN S-10, S-11, S-16</span><span class="foot__src">QUELLEN &nbsp;Q-07 · Dratsch et al. 2023 · Q-08 · Budzyń et al. 2025 · Q-09 · Ke et al. 2026 · Q-32 · Säule 1 · Dossier v1.1 · Q-34 · Säule 3 · Dossier v1.1</span><span class="foot__no">05 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s06" data-n="06" data-rail="1"><div class="stage">
@@ -788,7 +795,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="592" y="286" fill="#9AA7B2" font-size="13.5" font-weight="400" letter-spacing="0" text-anchor="start">externe Validierung zeigt Leistungsverluste</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 06</span><span class="chip">SÄULE 1–2</span><span class="chip">S-03, S-04, S-05, S-06</span><span class="foot__src">Starmer et al. 2014 · Van Veen et al. 2024 · Grolleau et al. 2026 · Rotter et al. 2025 · Rossetti et al. 2025 (CONCERN) · Wong et al. 2021</span><span class="foot__no">06 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 06 · S. 13</span><span class="chip">SÄULE 1–2</span><span class="chip">AUSSAGEN S-03, S-04, S-05, S-06</span><span class="foot__src">QUELLEN &nbsp;Q-04 · Starmer et al. 2014 · Q-05 · Van Veen et al. 2024 · Q-06 · Grolleau et al. 2026 · Q-11 · Rotter et al. 2025 · Q-14 · Rossetti et al. 2025 (CONCERN) · Q-15 · Wong et al. 2021</span><span class="foot__no">06 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s07" data-n="07" data-rail="1"><div class="stage">
@@ -870,7 +877,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <line x1="903.24" y1="280.5" x2="907.64" y2="280.5" stroke="#6C7883" stroke-width="1.3" stroke-linecap="round" opacity="0.5"/>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 06</span><span class="chip">SÄULE 1–3</span><span class="chip">S-08, S-09, S-23</span><span class="foot__src">Vishwanath et al. 2026 · Methodisches Gutachten 2026 · Dratsch et al. 2023 · Rossetti et al. 2025 (CONCERN) · Wong et al. 2021</span><span class="foot__no">07 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 06 · S. 13</span><span class="chip">SÄULE 1–3</span><span class="chip">AUSSAGEN S-08, S-09, S-23</span><span class="foot__src">QUELLEN &nbsp;Q-01 · Vishwanath et al. 2026 · Q-02 · Methodisches Gutachten 2026 · Q-07 · Dratsch et al. 2023 · Q-14 · Rossetti et al. 2025 (CONCERN) · Q-15 · Wong et al. 2021</span><span class="foot__no">07 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s08" data-n="08" data-rail="1"><div class="stage">
@@ -1014,7 +1021,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="275" y="282" fill="#B69A67" font-size="12.5" font-weight="400" letter-spacing="0" text-anchor="start">Technische Bereitstellung — noch keine klinische Bewertung.</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 05</span><span class="chip">SÄULE 3</span><span class="chip">S-09, S-16, S-23</span><span class="foot__src">Säule 3 · Dossier v1.1 · Methodisches Gutachten 2026 · Vishwanath et al. 2026</span><span class="foot__no">08 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 05 · S. 11</span><span class="chip">SÄULE 3</span><span class="chip">AUSSAGEN S-09, S-16, S-23</span><span class="foot__src">QUELLEN &nbsp;Q-34 · Säule 3 · Dossier v1.1 · Q-02 · Methodisches Gutachten 2026 · Q-01 · Vishwanath et al. 2026</span><span class="foot__no">08 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s09" data-n="09" data-rail="1"><div class="stage">
@@ -1068,7 +1075,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="681.333" y="277.08" fill="#9AA7B2" font-size="15.5" font-weight="400" letter-spacing="0" text-anchor="start">bleibt beim Menschen.</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 12</span><span class="chip">SÄULE 3</span><span class="chip">S-11, S-16</span><span class="foot__src">Säule 3 · Dossier v1.1 · Ke et al. 2026 · WHO Guidance</span><span class="foot__no">09 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 12 · S. 25</span><span class="chip">SÄULE 3</span><span class="chip">AUSSAGEN S-11, S-16</span><span class="foot__src">QUELLEN &nbsp;Q-34 · Säule 3 · Dossier v1.1 · Q-09 · Ke et al. 2026 · Q-20 · WHO Guidance</span><span class="foot__no">09 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s10" data-n="10" data-rail="1"><div class="stage">
@@ -1117,7 +1124,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <line x1="640.333" y1="159" x2="656.333" y2="159" stroke="#6C7883" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ci-arrow)"/>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 11</span><span class="chip">SÄULE 3</span><span class="chip">S-20</span><span class="foot__src">Säule 3 · Dossier v1.1 · Vishwanath et al. 2026 · Methodisches Gutachten 2026 · OpenEvidence-Synthesen</span><span class="foot__no">10 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 11 · S. 23</span><span class="chip">SÄULE 3</span><span class="chip">AUSSAGEN S-20</span><span class="foot__src">QUELLEN &nbsp;Q-34 · Säule 3 · Dossier v1.1 · Q-01 · Vishwanath et al. 2026 · Q-02 · Methodisches Gutachten 2026 · Q-35 · OpenEvidence-Synthesen</span><span class="foot__no">10 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s11" data-n="11" data-rail="1"><div class="stage">
@@ -1171,7 +1178,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="718" y="242" fill="#9AA7B2" font-size="17.5" font-weight="400" letter-spacing="0" text-anchor="start">Dysphagie</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 13</span><span class="chip">SÄULE 2</span><span class="chip">S-06, S-07, S-19</span><span class="foot__src">Säule 2 · Dossier v1.1 · Rossetti et al. 2025 (CONCERN) · Wong et al. 2021</span><span class="foot__no">11 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 13 · S. 27</span><span class="chip">SÄULE 2</span><span class="chip">AUSSAGEN S-06, S-07, S-19</span><span class="foot__src">QUELLEN &nbsp;Q-33 · Säule 2 · Dossier v1.1 · Q-14 · Rossetti et al. 2025 (CONCERN) · Q-15 · Wong et al. 2021</span><span class="foot__no">11 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s12" data-n="12" data-rail="1"><div class="stage">
@@ -1213,7 +1220,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="932" y="294" fill="#6C7883" font-size="12" font-weight="400" letter-spacing="1.1" text-anchor="end">Anschlussebene</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 08</span><span class="chip">SÄULE 2–3</span><span class="chip">S-17, S-18</span><span class="foot__src">Säule 2 · Dossier v1.1 · Säule 3 · Dossier v1.1 · EU AI Act · EHDS</span><span class="foot__no">12 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 08 · S. 17</span><span class="chip">SÄULE 2–3</span><span class="chip">AUSSAGEN S-17, S-18</span><span class="foot__src">QUELLEN &nbsp;Q-33 · Säule 2 · Dossier v1.1 · Q-34 · Säule 3 · Dossier v1.1 · Q-17 · EU AI Act · Q-18 · EHDS</span><span class="foot__no">12 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s13" data-n="13" data-rail="1"><div class="stage">
@@ -1272,7 +1279,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <text x="748" y="236" fill="#EDF1F4" font-size="20" font-weight="400" letter-spacing="0" text-anchor="start">stoppen</text>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 12</span><span class="chip">SÄULE 1–3</span><span class="chip">S-13, S-16, S-19</span><span class="foot__src">EU AI Act · MDR 2017/745 · WHO Guidance · OECD 2026 · Singapore AIHGle 2.0</span><span class="foot__no">13 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 12 · S. 25</span><span class="chip">SÄULE 1–3</span><span class="chip">AUSSAGEN S-13, S-16, S-19</span><span class="foot__src">QUELLEN &nbsp;Q-17 · EU AI Act · Q-19 · MDR 2017/745 · Q-20 · WHO Guidance · Q-21 · OECD 2026 · Q-22 · Singapore AIHGle 2.0</span><span class="foot__no">13 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen" id="s14" data-n="14" data-rail="1"><div class="stage">
@@ -1321,7 +1328,7 @@ body { font-family: var(--font-sans); color: var(--text); }
 <line x1="640" y1="132" x2="658" y2="132" stroke="#6C7883" stroke-width="1.4" stroke-linecap="round" marker-end="url(#ci-arrow)"/>
 </g>
 </svg></div>
-    <footer class="foot"><span class="chip">KAPITEL 14</span><span class="chip">SÄULE 1–3</span><span class="chip">S-01, S-21</span><span class="foot__src">Säule 1 · Dossier v1.1 · Säule 2 · Dossier v1.1 · Säule 3 · Dossier v1.1</span><span class="foot__no">14 / 14</span></footer>
+    <footer class="foot"><span class="chip">KI-STRATEGIEPAPIER KUK · KAP. 14 · S. 28</span><span class="chip">SÄULE 1–3</span><span class="chip">AUSSAGEN S-01, S-21</span><span class="foot__src">QUELLEN &nbsp;Q-32 · Säule 1 · Dossier v1.1 · Q-33 · Säule 2 · Dossier v1.1 · Q-34 · Säule 3 · Dossier v1.1</span><span class="foot__no">14 / 14</span></footer>
   </div>
 </div></section>
 <section class="screen screen--appendix" id="sQ1" data-n="Q1"><div class="stage">
@@ -1333,7 +1340,7 @@ body { font-family: var(--font-sans); color: var(--text); }
     </header>
     <div class="body"><ol class="refs"><li class="ref"><div class="ref__hd"><span class="ref__k">Starmer et al. 2014</span><span class="ref__s">Screen 03 · 06</span></div><p class="ref__z">Starmer AJ, Spector ND, Srivastava R, et al. Changes in Medical Errors after Implementation of a Handoff Program. N Engl J Med. 2014;371:1803–1812.</p><p class="ref__w">Mehrzentrenstudie zu einer strukturierten ärztlichen Übergabe. Zeigt, dass ein Eingriff in den klinischen Kernprozess die Rate medizinischer Fehler senken kann — ohne jede Technologie.</p><p class="ref__t">Stützt: Prozessgestaltung wirkt. Nicht: KI wirkt.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Rotter et al. 2025</span><span class="ref__s">Screen 03 · 06</span></div><p class="ref__z">Rotter T, et al. Clinical pathways. Cochrane Database of Systematic Reviews 2025.</p><p class="ref__w">Cochrane-Übersichtsarbeit zu klinischen Behandlungspfaden. Prozessmaße und Leitlinienadhärenz verbessern sich häufiger und belastbarer als patientenrelevante Endpunkte.</p><p class="ref__t">Stützt: Pfade verbessern Prozesse. Nicht: Pfade verbessern Gesundheit.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Van Veen et al. 2024</span><span class="ref__s">Screen 06</span></div><p class="ref__z">Van Veen D, Van Uden C, Blankemeier L, et al. Adapted large language models can outperform medical experts in clinical text summarization. Nat Med. 2024;30:1134–1142.</p><p class="ref__w">Arbeit zur generativen Zusammenfassung klinischer Texte. Angepasste Sprachmodelle können Qualität und Nutzbarkeit verbessern.</p><p class="ref__t">Stützt: Textsynthese ist technisch leistungsfähig. Nicht: sie ist klinisch sicher.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Grolleau et al. 2026</span><span class="ref__s">Screen 04 · 06</span></div><p class="ref__z">Grolleau F, Liang AS, Keyes T, et al. Physician-Reported Safety Outcomes of AI-Generated Hospital Course Summaries. JAMA Netw Open. 2026;9:e2616556.</p><p class="ref__w">Ärztlich berichtete Sicherheitsbefunde zu KI-erzeugten Verlaufszusammenfassungen. Auslassung und fehlerhafte Verdichtung bleiben die zentralen Risiken.</p><p class="ref__t">Stützt: Weglassen ist das Leitrisiko, nicht Erfinden.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Rossetti et al. 2025 (CONCERN)</span><span class="ref__s">Screen 06 · 07 · 11</span></div><p class="ref__z">Rossetti SC, et al. Real-time surveillance of nursing documentation (CONCERN). Nature Medicine 2025.</p><p class="ref__w">Studie zu einem Frühwarnsystem auf Basis der Pflegedokumentation. Wirkung ist möglich, wenn ein realer Reaktionspfad existiert.</p><p class="ref__t">Stützt: Signal plus Reaktionspfad wirkt. Nicht: Signal allein wirkt.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Wong et al. 2021</span><span class="ref__s">Screen 06 · 07 · 11</span></div><p class="ref__z">Wong A, et al. External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients. JAMA Intern Med. 2021.</p><p class="ref__w">Externe Validierung eines weit verbreiteten proprietären Sepsis-Vorhersagemodells. Die reale Leistung lag deutlich unter der berichteten.</p><p class="ref__t">Stützt: externe Validierung ist zwingend. Nicht: Frühwarnung ist wertlos.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Peterson et al. 1992</span><span class="ref__s">Screen 04</span></div><p class="ref__z">Peterson MC, Holbrook JH, Hales D, et al. Contributions of the history, physical examination, and laboratory investigation in making medical diagnoses. West J Med. 1992;156:163–165.</p><p class="ref__w">Klassische Arbeit zum diagnostischen Beitrag von Anamnese, Untersuchung und Labor.</p><p class="ref__t">Stützt: die klinische Rekonstruktion trägt die Diagnose.</p></li></ol></div>
     <footer class="foot"><span class="chip">NICHT TEIL DER REDEZEIT</span>
-      <span class="foot__src">Vollständige Zitation mit Fundstelle im Quellenverzeichnis des Strategiepapiers, Anhang D.</span>
+      <span class="foot__src">QUELLEN &nbsp;Vollständige Zitation mit Fundstelle im Quellenverzeichnis des Strategiepapiers, Anhang D.</span>
       <span class="foot__no">Q1</span></footer>
   </div>
 </div></section>
@@ -1346,7 +1353,7 @@ body { font-family: var(--font-sans); color: var(--text); }
     </header>
     <div class="body"><ol class="refs"><li class="ref"><div class="ref__hd"><span class="ref__k">Vishwanath et al. 2026</span><span class="ref__s">Screen 07 · 08 · 10</span></div><p class="ref__z">Vishwanath K, Alyakin A, Ghosh M, Hage A, Neifert SN, Orillac C, Mandelberg NJ, Khan HA, Lee JV, Yao JJ, Small WR, Varma A, Hewitt DB, Aphinyanaphongs Y, Alber DA, Oermann EK. General-purpose large language models outperform specialized clinical AI tools on medical benchmarks. Nature Medicine. 2026;32(7):2405–2409. Brief Communication.</p><p class="ref__w">Systemvergleich in Nature Medicine: zwei spezialisierte klinische Wissenssysteme gegen drei allgemeine Sprachmodelle, auf Wissensbenchmarks und hundert realen klinischen Anfragen.</p><p class="ref__t">Stützt: Spezialisierung ist nicht automatisch überlegen. Nicht: klinische Überlegenheit, Patientenergebnisse, Arzt-plus-KI, ein Urteil über RAG oder über ClinicalKey AI.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Methodisches Gutachten 2026</span><span class="ref__s">Screen 07 · 08</span></div><p class="ref__z">System gegen System oder Arzt plus System? Kritisches Review der Forschungslogik von Vishwanath et al., Nature Medicine 2026. Internes methodisches Gutachten, 13 Seiten, Stand 01.08.2026.</p><p class="ref__w">Methodisches Review der Forschungslogik: System gegen System oder Arzt plus System?</p><p class="ref__t">Stützt: Benchmarkleistung sagt Teamleistung nicht vorher.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Dratsch et al. 2023</span><span class="ref__s">Screen 04 · 05 · 07</span></div><p class="ref__z">Dratsch T, Chen X, Rezazade Mehrizi M, et al. Automation Bias in Mammography: The Impact of Artificial Intelligence BI-RADS Suggestions on Reader Performance. Radiology. 2023;307:e222176.</p><p class="ref__w">Prospektive Studie zu Automation Bias in der Mammografie. Auch sehr erfahrene Befundende wurden durch bewusst falsche Hinweise deutlich beeinflusst.</p><p class="ref__t">Stützt: Automation Bias betrifft auch Erfahrene.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Budzyń et al. 2025</span><span class="ref__s">Screen 05</span></div><p class="ref__z">Budzyń K, Romańczyk M, Kitala D, et al. Endoscopist deskilling risk after exposure to artificial intelligence in colonoscopy: a multicentre, observational study. Lancet Gastroenterol Hepatol. 2025;10:896–903.</p><p class="ref__w">Beobachtungsstudie zum Kompetenzverlust von Endoskopikern nach Exposition gegenüber KI-Unterstützung.</p><p class="ref__t">Stützt: De-Skilling ist ein Sicherheitsthema, kein Kulturthema.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Ke et al. 2026</span><span class="ref__s">Screen 05 · 09</span></div><p class="ref__z">Ke Y, Jin L, Ong JCL, et al. AI-induced never-skilling in medical education. Nat Med. 2026;32:1997–2006.</p><p class="ref__w">Arbeit zu Never-Skilling in der medizinischen Ausbildung: Kompetenz, die gar nicht erst erworben wird.</p><p class="ref__t">Stützt: Kompetenzaufbau muss aktiv gestaltet werden.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Goodman et al. 2024</span><span class="ref__s">Screen 01 · 04</span></div><p class="ref__z">Goodman KE, Yi PH, Morgan DJ. AI-Generated Clinical Summaries Require More Than Accuracy. JAMA. 2024;331:637–638.</p><p class="ref__w">Fachkommentar: KI-erzeugte klinische Zusammenfassungen brauchen mehr als Genauigkeit.</p><p class="ref__t">Stützt: Genauigkeit allein ist kein Qualitätsmaß.</p></li></ol></div>
     <footer class="foot"><span class="chip">NICHT TEIL DER REDEZEIT</span>
-      <span class="foot__src">Die Primärarbeit von Vishwanath et al. liegt im Projekt als Quelldatei vor. Zu OpenEvidence liegen die Ausgangssynthesen nicht als Quelldateien vor.</span>
+      <span class="foot__src">QUELLEN &nbsp;Die Primärarbeit von Vishwanath et al. liegt im Projekt als Quelldatei vor. Zu OpenEvidence liegen die Ausgangssynthesen nicht als Quelldateien vor.</span>
       <span class="foot__no">Q2</span></footer>
   </div>
 </div></section>
@@ -1359,7 +1366,7 @@ body { font-family: var(--font-sans); color: var(--text); }
     </header>
     <div class="body"><ol class="refs"><li class="ref"><div class="ref__hd"><span class="ref__k">EU AI Act</span><span class="ref__s">Screen 12 · 13</span></div><p class="ref__z">Verordnung (EU) 2024/1689 über künstliche Intelligenz, einschließlich der Änderungen durch das AI-Omnibus-Paket (EU) 2026/1744. Rechtsstand 10.08.2026.</p><p class="ref__w">Europäische KI-Verordnung samt Änderungen durch das AI-Omnibus-Paket.</p><p class="ref__t">Stützt: Pflichten folgen der Risikoklasse und der Zweckbestimmung.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">MDR 2017/745</span><span class="ref__s">Screen 13</span></div><p class="ref__z">Verordnung (EU) 2017/745 über Medizinprodukte, insbesondere Regel 11 des Anhangs VIII, in Verbindung mit MDCG 2019-11 rev.1.</p><p class="ref__w">Medizinprodukteverordnung, insbesondere Regel 11 des Anhangs VIII.</p><p class="ref__t">Stützt: die Einordnung folgt der Zweckbestimmung je Funktion, nicht dem Produktnamen.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">EHDS</span><span class="ref__s">Screen 12</span></div><p class="ref__z">Verordnung (EU) 2025/327 über den europäischen Raum für Gesundheitsdaten. Geltung ab 26.03.2027, gestufte Pflichten bis 2035.</p><p class="ref__w">Europäischer Raum für Gesundheitsdaten mit gestuften Pflichten.</p><p class="ref__t">Stützt: Sekundärnutzung bekommt einen geregelten Rahmen.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">WHO Guidance</span><span class="ref__s">Screen 09 · 13</span></div><p class="ref__z">WHO. Ethics and Governance of Artificial Intelligence for Health (2021); Regulatory Considerations on AI for Health (2023); Guidance on Large Multi-Modal Models.</p><p class="ref__w">WHO-Leitlinien zu Ethik und Governance künstlicher Intelligenz für Gesundheit, einschließlich großer multimodaler Modelle.</p><p class="ref__t">Stützt: internationale Ordnungsmodelle existieren. Nicht: sie belegen Wirksamkeit.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">OECD 2026</span><span class="ref__s">Screen 13</span></div><p class="ref__z">OECD. Scaling Artificial Intelligence in Health. Policy-Checkliste, nicht präskriptiv.</p><p class="ref__w">OECD-Arbeit zur Skalierung künstlicher Intelligenz im Gesundheitswesen. Policy-Checkliste, nicht präskriptiv.</p><p class="ref__t">Stützt: Skalierung braucht institutionelle Voraussetzungen.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Singapore AIHGle 2.0</span><span class="ref__s">Screen 13</span></div><p class="ref__z">Ministry of Health Singapore. Artificial Intelligence in Healthcare Guidelines (AIHGle) 2.0. Living Guidance, ergänzt die Medizinprodukteaufsicht.</p><p class="ref__w">Singapurer Leitlinien für KI im Gesundheitswesen, ergänzend zur Medizinprodukteaufsicht.</p><p class="ref__t">Stützt: ein praktikables Gate-Modell ist möglich.</p></li><li class="ref"><div class="ref__hd"><span class="ref__k">Datenschutzbehörde</span><span class="ref__s">Screen 01</span></div><p class="ref__z">Österreichische Datenschutzbehörde. Künstliche Intelligenz und Datenschutz. Datenschutzrechtliche Orientierung, keine Krankenhaus-Spezialregel.</p><p class="ref__w">Orientierung der österreichischen Datenschutzbehörde zu künstlicher Intelligenz und Datenschutz.</p><p class="ref__t">Stützt: es gibt keine krankenhausspezifische Sonderregel. Das ist eine Steuerungslücke, keine Erlaubnis.</p></li></ol></div>
     <footer class="foot"><span class="chip">NICHT TEIL DER REDEZEIT</span>
-      <span class="foot__src">Diese Übersicht ersetzt keine Rechtsberatung. Eine abschließende juristische Bewertung bleibt der zuständigen Stelle vorbehalten.</span>
+      <span class="foot__src">QUELLEN &nbsp;Diese Übersicht ersetzt keine Rechtsberatung. Eine abschließende juristische Bewertung bleibt der zuständigen Stelle vorbehalten.</span>
       <span class="foot__no">Q3</span></footer>
   </div>
 </div></section>
@@ -1372,7 +1379,7 @@ body { font-family: var(--font-sans); color: var(--text); }
     </header>
     <div class="body"><div class="gloss"><article class="card card--record"><h3>Clinical Record Intelligence</h3><p>Vertrauenswürdige, longitudinale und überprüfbare klinische Sicht auf den Patienten.</p></article><article class="card card--process"><h3>Clinical Process Intelligence</h3><p>Situativ unterstützte, messbare und menschlich verantwortete Versorgungsprozesse.</p></article><article class="card card--knowledge"><h3>Clinical Knowledge &amp; Reasoning Intelligence</h3><p>Evidenz- und Wissenszugang zur Stärkung des klinischen Denkens und Entscheidens.</p></article><article class="card card--governance"><h3>Amplified Intelligence</h3><p>Gezielte Verstärkung menschlicher klinischer Intelligenz. Kein Ersatz und keine Entscheidungshoheit des Systems.</p></article><article class="card card--risk"><h3>Cognitive Overload</h3><p>Kognitive Überlastung durch Informationsdichte, Unterbrechungen, Zeitdruck und häufige Aufgabenwechsel.</p></article><article class="card card--process"><h3>Cognitive Offloading</h3><p>Gezielte Auslagerung kognitiver Last an ein System, um klinisches Denken zu ermöglichen — nicht, um es zu ersetzen.</p></article><article class="card card--knowledge"><h3>AI Communication</h3><p>Die professionelle Fähigkeit, mit einem generativen System präzise, kritisch und verantwortungsvoll zu kommunizieren.</p></article><article class="card card--record"><h3>RAG · Retrieval-Augmented Generation</h3><p>Generative Antwort auf Basis abgerufener Quellen. Quellenverlinkung ist dabei keine Quellenprüfung.</p></article><article class="card card--risk"><h3>Automation Bias</h3><p>Die Neigung, einem automatisierten Hinweis auch dann zu folgen, wenn er falsch ist.</p></article><article class="card card--risk"><h3>De-Skilling · Never-Skilling</h3><p>Verlust bereits erworbener Kompetenz beziehungsweise Nichterwerb von Kompetenz durch dauerhafte Unterstützung.</p></article><article class="card card--governance"><h3>Kalibriertes Vertrauen</h3><p>Vertrauen in der Höhe, die der tatsächlichen Verlässlichkeit des Systems entspricht — weder zu viel noch zu wenig.</p></article><article class="card card--partner"><h3>CKAI · ClinicalKey AI</h3><p>Wissenssystem; hier ein kontrollierter erster Implementierungsfall, vor Einsatz lokal zu prüfen.</p></article></div></div>
     <footer class="foot"><span class="chip">NICHT TEIL DER REDEZEIT</span>
-      <span class="foot__src">Produktstatus mit Stand 11.08.2026 · Rechtsstand 10.08.2026.</span>
+      <span class="foot__src">QUELLEN &nbsp;Produktstatus mit Stand 11.08.2026 · Rechtsstand 10.08.2026.</span>
       <span class="foot__no">Q4</span></footer>
   </div>
 </div></section>
