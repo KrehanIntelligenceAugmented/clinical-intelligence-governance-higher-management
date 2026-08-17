@@ -164,6 +164,13 @@ body { font-family: var(--font-sans); color: var(--text); }
 .bar__dots button.is-on { background: var(--record); height: 8px; }
 .bar__dots button:focus-visible { outline: 2px solid var(--record); outline-offset: 2px; }
 
+/* Die Quellenzeile bekommt eine eigene volle Zeile unter den Chips.
+   Mit Quellenschluesseln wird sie laenger; nebeneinander wuerde sie in
+   drei schmale Zeilen brechen. */
+.foot { row-gap: 6px; }
+.foot__src { flex: 1 1 100%; order: 9; }
+.foot__no { order: 8; margin-left: auto; }
+
 /* --- Uebersicht: echtes modales Overlay ---------------------------- */
 [hidden] { display: none !important; }
 .map {
@@ -444,6 +451,55 @@ def fix_s11_card_height(doc):
 
 
 # ==========================================================================
+def harmonize_references(doc):
+    """Referenzharmonisierung mit dem KI-Strategiepapier KUK v1.1.
+
+    Geaendert werden ausschliesslich Fusszeilen-Referenzen:
+
+      · der Kapitelchip nennt Dokument, Kapitel und Seite der eingefrorenen
+        Paginierung der Fassung v1.1,
+      · der Aussagenchip wird beschriftet, damit keine Kennung allein steht,
+      · jede Quelle in der Quellenzeile erhaelt ihren Quellenschluessel.
+
+    Folieninhalt, Reihenfolge, Grafiken und Bedienung bleiben unberuehrt.
+    """
+    import sys as _sys
+    _sys.path.insert(0, os.path.join(
+        "/Users/Ingomar/Desktop/Higher Management/final-clinical-intelligence",
+        "shared"))
+    import content_core as CC
+
+    # Eingefrorene Paginierung der Fassung v1.1 (siehe v1.1/PAGE_MAP.md)
+    seite = {"01": 3, "02": 5, "03": 7, "04": 10, "05": 11, "06": 13, "07": 15,
+             "08": 17, "09": 19, "10": 21, "11": 23, "12": 25, "13": 27,
+             "14": 28}
+
+    def kapitelchip(m):
+        k = m.group(1)
+        return ('<span class="chip">KI-STRATEGIEPAPIER KUK · KAP. %s · S. %d</span>'
+                % (k, seite[k]))
+
+    doc = re.sub(r'<span class="chip">KAPITEL (\d\d)</span>', kapitelchip, doc)
+    doc = re.sub(r'<span class="chip">(S-\d\d(?:, S-\d\d)*)</span>',
+                 r'<span class="chip">AUSSAGEN \1</span>', doc)
+
+    # Quellenzeilen: jede bekannte Kurzform bekommt ihren Schluessel voran.
+    paare = sorted(((CC.SOURCES[k]["kurz"], CC.QUELLEN_KEYS[k])
+                    for k in CC.SOURCES), key=lambda x: -len(x[0]))
+
+    def quellzeile(m):
+        inner = m.group(1)
+        for kurz, q in paare:
+            if kurz in inner and (q + " ·") not in inner:
+                inner = inner.replace(kurz, "%s · %s" % (q, kurz), 1)
+        return '<span class="foot__src">QUELLEN &nbsp;%s</span>' % inner
+
+    doc = re.sub(r'<span class="foot__src">(.*?)</span>', quellzeile, doc,
+                 flags=re.S)
+    return doc
+
+
+# ==========================================================================
 def build():
     doc = io.open(SRC, encoding="utf-8").read()
 
@@ -521,6 +577,7 @@ def build():
     )
 
     html = fix_s11_card_height(html)
+    html = harmonize_references(html)
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     io.open(OUT, "w", encoding="utf-8").write(html)
