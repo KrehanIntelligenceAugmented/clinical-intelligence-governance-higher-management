@@ -116,7 +116,18 @@ body { font-family: var(--font-sans); color: var(--text); }
 .screen.is-leaving  { opacity: 0; visibility: visible; z-index: 3;
                       transition: opacity 200ms ease; }
 
-/* --- Buehne: feste Entwurfsgroesse, proportional skaliert ---------- */
+/* --- Buehne: feste Entwurfsgroesse, proportional skaliert ----------
+
+   Skaliert wird bewusst weiterhin mit `transform: scale()`.
+
+   Geprueft und wieder verworfen wurde `zoom`: Es setzt den Text zwar im
+   Zielmassstab und damit schaerfer, fuehrte in der Pruefung bei 1366 x 768
+   aber zu einer sichtbaren Fehldarstellung — die Folie erschien verkleinert
+   in der linken oberen Ecke. Die DOM-Messung meldete korrekte Werte, das
+   gerenderte Bild war falsch. Vor einem Vortragstermin ist die bewaehrte,
+   in allen Aufloesungen geprueften Geometrie wichtiger als der
+   Schaerfegewinn.
+   ------------------------------------------------------------------- */
 .stage {
   position: absolute; top: 50%; left: 50%;
   width: 1920px; height: 1080px;
@@ -499,6 +510,44 @@ def harmonize_references(doc):
     return doc
 
 
+
+# ==========================================================================
+def patch_slide12(doc):
+    """Rollenklarheit auf Folie 12.
+
+    Die Aussage "sie fuehren nicht" laesst sich als Abwertung von Layer 2
+    und Layer 3 lesen. Ersetzt wird sie durch die arbeitsteilige
+    Verantwortungslogik, wie sie die Singapore AI in Healthcare Guidelines
+    2.0 fuer Entwickler, Betreiber und klinische Anwender beschreiben.
+    AIHGle 2.0 dient dabei als internationaler Referenzrahmen fuer die
+    Trennung und Verbindung von Verantwortungsbereichen — nicht als Beleg
+    fuer das Drei-Layer-Modell dieses Projekts.
+
+    Geaendert werden ausschliesslich die Ueberschrift und die Quellenzeile
+    von Screen 12.
+    """
+    alt = "Layer 2 und Layer 3 schließen an — sie führen nicht."
+    neu = ("Layer 2 und Layer 3 schließen an. Sie übernehmen Führung bei "
+           "Deployment, Integration und Governance.")
+    m = re.search(r'<section[^>]*id="s12".*?</section>', doc, re.S)
+    assert m, "Screen s12 nicht gefunden"
+    block = m.group(0)
+    assert alt in block, "Ausgangsformulierung auf Folie 12 nicht gefunden"
+    block = block.replace(alt, neu)
+
+    # Kurzreferenz in die vorhandene Quellenzeile, in vorhandener Typografie
+    ref = "Q-22 · Singapore MOH &amp; HSA · AIHGle 2.0 · 2026"
+    block = re.sub(r'(<span class="foot__src">QUELLEN &nbsp;)(.*?)(</span>)',
+                   lambda x: x.group(1) + x.group(2) + " · " + ref + x.group(3),
+                   block, count=1, flags=re.S)
+    doc = doc[:m.start()] + block + doc[m.end():]
+
+    # Dieselbe Aussage steht in der Uebersicht und im Titel der Sprungmarke.
+    doc = doc.replace(alt, neu)
+    assert alt not in doc, "Alte Formulierung nicht vollstaendig ersetzt"
+    return doc
+
+
 # ==========================================================================
 def build():
     doc = io.open(SRC, encoding="utf-8").read()
@@ -578,6 +627,7 @@ def build():
 
     html = fix_s11_card_height(html)
     html = harmonize_references(html)
+    html = patch_slide12(html)
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     io.open(OUT, "w", encoding="utf-8").write(html)
